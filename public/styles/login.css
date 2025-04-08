@@ -1,0 +1,135 @@
+/*Customização da página*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient( #0C253E, black);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    position: absolute;
+    top: 4em;
+}
+
+.login-container {
+    background-color: #08192A;
+    width: 30em;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+/*Estilo da div de login e componentes*/
+
+.login-container {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 3em;
+    box-shadow: 0 0 30px 0 #040313;
+    position: relative;
+}
+
+/*Alerta de erro*/
+#error-alert {
+    color: rgb(225, 75, 75);
+    position: absolute;
+    top: 10px;
+}
+
+/*DIV dos campos de dados*/
+.datas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+/*Email*/
+.email-container {
+    background-color: #0C253E;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+#email {
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #BCBDC2;
+    width: 100%;
+}
+
+/*Senha*/
+.password-container {
+    background-color: #0C253E;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+#password {
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #BCBDC2;
+    width: 100%;
+}
+#btn-view-password {
+    background: transparent;
+    border: none;
+}
+#btn-ocult-password {
+    background: transparent;
+    border: none;
+    display: none;
+}
+
+/*Botões*/
+.buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Entrar*/
+#btn-enter {
+    width: 30%;
+    height: 2.5em;
+    background-color: #2563EB;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+#btn-enter:hover {
+    background: linear-gradient(90deg, #1cc4fa 0, #964bcc 100%, #d425db 25%);
+}
+
+/*Criar conta*/
+#link-register {
+    text-decoration: none;
+    color: white;
+}

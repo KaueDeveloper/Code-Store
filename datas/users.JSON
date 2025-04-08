@@ -1,0 +1,40 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Lucas",
+      "sobrenome": "Silva",
+      "email": "lucas@gmail.com",
+      "senha": "lucas123", 
+      "dadosPessoais": {
+      "telefone": "",
+      "endereco": "",
+      "cpf": ""
+    }
+    },
+    {
+      "id": 2,
+      "nome": "Pedro",
+      "sobrenome": "Sampaio",
+      "email": "pedro@gmail.com",
+      "senha": "pedro123", 
+      "dadosPessoais": {
+      "telefone": "",
+      "endereco": "",
+      "cpf": ""
+    }
+    },
+    {
+      "id": 3,
+      "nome": "Alicia",
+      "sobrenome": "Martins",
+      "email": "alicia@gmail.com",
+      "senha": "alicia123", 
+      "dadosPessoais": {
+      "telefone": "",
+      "endereco": "",
+      "cpf": ""
+    }
+    }
+  ]
+}

@@ -20,16 +20,13 @@ body {
     top: 4em;
 }
 
+/*Estilo da div de login e componentes*/
+
 .login-container {
     background-color: #08192A;
     width: 30em;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-}
-
-/*Estilo da div de login e componentes*/
-
-.login-container {
     border-radius: 20px;
     display: flex;
     flex-direction: column;

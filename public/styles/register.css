@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient( #0C253E, black);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+    width: 10em;
+}
+
+/*Estilo da div de cadastro e componentes*/
+
+.register-container {
+    background-color: #08192A;
+    width: 30em;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 3em;
+    padding-top: 2em;
+    box-shadow: 0 0 30px 0 #040313;
+    position: relative;
+    overflow: hidden;
+}
+
+/*Título*/
+#title {
+    color: rgb(216, 217, 220);
+}
+
+/*Error*/
+#error {
+    color: rgb(225, 75, 75);
+    position: absolute;
+    top: 5.5em;
+    font-size: 0.9em;
+}
+
+/*Div dos campos de dados*/
+.datas {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/*Cmpos de dados 1 e componentes*/
+.data-camps1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+/*Nome*/
+.name-container {
+    background-color: #0C253E;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 3.5em;
+}
+#name {
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #BCBDC2;
+    width: 100%;
+    font-size: 20px;
+    padding-left: 0.7em;
+}
+.name-placeholder::placeholder {
+    color: #BCBDC2;
+}
+.name-error::placeholder {
+    color: rgb(225, 75, 75);
+}
+
+/*Sobrenome*/
+.lastname-container {
+    background-color: #0C253E;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 3.5em;
+}
+#lastname {
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #BCBDC2;
+    width: 100%;
+    font-size: 20px;
+    padding-left: 0.7em;
+}
+.lastname-placeholder::placeholder {
+    color: #BCBDC2;
+}
+.lastname-error::placeholder {
+    color: rgb(225, 75, 75);
+}
+
+@keyframes exitDatasAnimation {
+    0% {
+        margin-left: 0;
+        opacity: 100%;
+    }75% {
+        opacity: 0;
+    }100% {
+        margin-left: -40em;
+        opacity: 0;
+    }
+}
+
+@keyframes startDatasAnimation {
+    0% {
+        margin-right: -40em;
+        opacity: 0;
+    }75% {
+        opacity: 0;
+    }100% {
+        margin-right: 0;
+        opacity: 100%;
+    }
+}
+
+@keyframes opacityOn {
+    from {
+        opacity: 0;
+    }to {
+        opacity: 100;
+    }
+}
+
+@keyframes opacityOff {
+    from {
+        opacity: 100;
+    }to {
+        opacity: 0;
+    }
+}
+
+/*Campo de dados 2 e componentes*/
+.data-camps2 {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 2em;
+}
+
+/*Email*/
+.email-container {
+    background-color: #0C253E;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 3.5em;
+}
+#email {
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #BCBDC2;
+    width: 100%;
+    font-size: 20px;
+}
+.email-placeholder::placeholder {
+    color: #BCBDC2;
+}
+.email-error::placeholder {
+    color: rgb(225, 75, 75);
+}
+
+/*Senha*/
+.password-container {
+    background-color: #0C253E;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 3.5em;
+}
+#password {
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #BCBDC2;
+    width: 100%;
+    font-size: 20px;
+}
+.password-placeholder::placeholder {
+    color: #BCBDC2;
+}
+.password-error::placeholder {
+    color: rgb(225, 75, 75);
+}
+#btn-view-password {
+    background: transparent;
+    border: none;
+}
+#btn-ocult-password {
+    background: transparent;
+    border: none;
+    display: none;
+}
+
+/*buttons-container*/
+.buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Botão de próxima página*/
+#btn-next {
+    width: 30%;
+    height: 2.5em;
+    background-color: #2563EB;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+#btn-next:hover {
+    background: linear-gradient(90deg, #1cc4fa 0, #964bcc 100%, #d425db 25%);
+}
+
+/*Botão para criar conta*/
+#btn-create-account {
+    width: 30%;
+    height: 2.5em;
+    background-color: #2563EB;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    display: none;
+}
+#btn-create-account:hover {
+    background: linear-gradient(90deg, #1cc4fa 0, #964bcc 100%, #d425db 25%);
+}
+
+/*Barra animada*/
+.bar-container {
+    width: 100%;
+    height: 0.5em;
+    position: absolute;
+    bottom: 0;
+}
+.bar {
+    height: 0.5em;
+    width: 0;
+    background: linear-gradient(
+      90deg,
+      #1cc4fa 0%,
+      #d425db 25%,
+      #964bcc 100%
+    );
+    background-size: 400% 100%;
+    border-radius: 5px;
+    transition: width 0.1s ease-in-out;
+  }
+@keyframes gradienteFluido {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 25% 100%;
+    }
+}
+
+@keyframes barMove {
+    from {
+        width: 0;
+    }to {
+        width: 50%;
+    }
+}

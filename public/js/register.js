@@ -213,11 +213,12 @@ function createAccount() {
         error.innerHTML = "* Insira um email válido! *"
     }
     else {
-        //Verificar se o email inserido ja está cadastrado
-        fetch('../../datas/users.JSON')
+        //Verifica se o email inserido ja está cadastrado
+        fetch('/database/users')
         .then(res => res.json())
         .then(users => {
             for(i = 0; i < users.usuarios.length; i++) {
+                //Se o email foi encontrado
                 if(users.usuarios[i].email == email.value){
                     emailEncontrado = true
                     error.innerHTML = "* Email já cadastrado *"
@@ -227,7 +228,6 @@ function createAccount() {
             //Se o email não foi encontrado
             if(!emailEncontrado) {
                 //Cadastrar dados em users.JSON e redirecionar o usuário para a página de login
-                alert("Conta criada com sucesso!")
             }
         })
     }

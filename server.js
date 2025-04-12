@@ -1,6 +1,38 @@
 const express = require('express');
 const path = require('path');
 const server = express();
+const jsonfile = require('jsonfile');
+
+//Requisição para cadastrar novo usuário
+server.get("/newuser", (req, res) => {
+    const id = req.query.id;
+    const name = req.query.name;
+    const lastname = req.query.lastname;
+    const email = req.query.email;
+    const password = req.query.password;
+    const users = path.join(__dirname, 'datas', 'users.JSON');
+
+    const newUser = {
+        "id": id,
+        "nome": name,
+        "sobrenome": lastname,
+        "email": email,
+        "senha": password, 
+        "dadosPessoais": {
+        "telefone": "",
+        "endereco": "",
+        "cpf": ""
+      }
+    }
+
+    jsonfile.readFile(users, (err, data) => {
+        data.usuarios.push(newUser)
+
+        jsonfile.writeFile(users, data, { spaces: 2}, () => {});
+    });
+
+    res.send()
+})
 
 server.use(express.static('public'));
 

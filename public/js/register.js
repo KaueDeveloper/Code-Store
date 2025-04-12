@@ -179,6 +179,8 @@ function createAccount() {
     const closedEyeIcon = document.getElementById("icon-closed-eye");
     const error = document.getElementById("error");
     const padraoEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const name = document.getElementById("name");
+    const lastname = document.getElementById("lastname");
     let emailEncontrado = false
 
     if(email.value == "" && password.value == "") {
@@ -228,6 +230,7 @@ function createAccount() {
             //Se o email não foi encontrado
             if(!emailEncontrado) {
                 //Cadastrar dados em users.JSON e redirecionar o usuário para a página de login
+                fetch(`/newuser?name=${name.value}&lastname=${lastname.value}&email=${email.value}&password=${password.value}&id=${users.usuarios.length + 1}`);
             }
         })
     }
